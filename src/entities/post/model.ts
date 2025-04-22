@@ -7,10 +7,13 @@ export type Post = {
   body: string;
 };
 
-export const usePosts = () =>
+export const usePosts = (page: number = 1, limit: number = 10) =>
   useQuery<Post[]>({
-    queryKey: ['posts'],
-    queryFn: () => fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
+    queryKey: ['posts', page],
+    queryFn: () =>
+      fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit}`).then(res =>
+        res.json()
+      )
   });
 
 export const usePost = (id: string | number) =>

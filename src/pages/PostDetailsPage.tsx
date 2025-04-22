@@ -16,7 +16,7 @@ export const PostDetailsPage = ({ id }: { id: string }) => {
       <Typography variant="h4" gutterBottom>
         {post.title}
       </Typography>
-      <Typography paragraph>{post.body}</Typography>
+      <Typography>{post.body}</Typography>
       <Typography variant="subtitle2" gutterBottom>
         Автор: {user?.name}
       </Typography>
