@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import { PostDetailsPage } from '@/pages/PostDetailsPage';
+import PostDetailsPage from '@/pages/PostDetailsPage';
 import { ErrorDialog } from '@/shared/ErrorDialog/ErrorDialog';
 import { useDialogProps } from '@/shared/hooks/useDialogProps';
 import { useEffect } from 'react';

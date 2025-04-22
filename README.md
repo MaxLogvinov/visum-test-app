@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Тестовое задание — SPA-приложение со списком постов
 
-## Getting Started
+Приложение реализует простое SPA на базе Next.js с использованием TypeScript, React 18+, MUI, TanStack Query и FSD-архитектуры. Проект создан в рамках тестового задания для позиции Frontend-разработчика.
 
-First, run the development server:
+Приложение использует API JSONPlaceholder для получения данных о постах и пользователях.
 
-```bash
+## Технологии и библиотеки
+
+- **React**: библиотека для создания пользовательских интерфейсов.
+- **Next.js 15 (App Router, Client Components)**: фреймворк построения React-приложений.
+- **TypeScript**: язык программирования с поддержкой статической типизации.
+- **TanStack Query v5**: для асинхронных запросов и кэширования.
+- **MUI (Material-UI)**: библиотека компонентов для создания UI.
+- **FSD (Feature-Sliced Design)**: архитектура приложения.
+- **React Context + ErrorBoundary**: централизованная обработка ошибок.
+
+## Функциональность
+
+1. **Главная страница со списком постов:**
+
+- Отображается номер, заголовок, описание поста
+- Кнопка "Просмотр" ведёт на страницу детального просмотра поста
+- Пагинация
+
+2. **Страница поста:**:
+
+   - Полный текст поста
+   - Имя автора
+   - Кнопка "Назад" возвращает к списку постов
+
+3. **Обработка ошибок**
+
+- Все ошибки, возникающие при загрузке данных, отображаются через централизованный ErrorDialog
+
+## Установка и запуск проекта
+
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/MaxLogvinov/visum-test-app.git
+   cd visum-test-app
+   ```
+2. Установите зависимости:
+   ```sh
+   npm install
+   # или
+   yarn install
+   ```
+
+### Запуск приложения
+
+Для запуска сервера разработки выполните:
+
+```sh
 npm run dev
-# or
+# или
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Приложение будет доступно по адресу http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Деплой на Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**[Ссылка на сайт](https://)**
 
-## Learn More
+#### Возможные улучшения
 
-To learn more about Next.js, take a look at the following resources:
+Добавить:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Фильтрацию по авторам
+- Поиск по заголовкам
+- Сортировку постов
+- Сохранение избранного в LocalStorage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Реализовать:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Ленивая загрузка компонентов
+- Тесты с React Testing Library
+- Возможность деплоя (например, на Vercel)

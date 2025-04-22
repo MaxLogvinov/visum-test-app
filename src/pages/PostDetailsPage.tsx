@@ -9,7 +9,7 @@ import { ErrorDialog } from '@/shared/ErrorDialog/ErrorDialog';
 import { useDialogProps } from '@/shared/hooks/useDialogProps';
 import { useEffect } from 'react';
 
-export const PostDetailsPage = ({ id }: { id: string }) => {
+const PostDetailsPage = ({ id }: { id: string }) => {
   const { isOpened, open, close } = useDialogProps();
 
   const { data: post, isLoading: isPostLoading, error: postError } = usePost(id);
@@ -40,7 +40,6 @@ export const PostDetailsPage = ({ id }: { id: string }) => {
       <Link href="/">
         <Button variant="outlined">Назад</Button>
       </Link>
-
       <ErrorDialog
         open={isOpened}
         onClose={close}
@@ -49,3 +48,5 @@ export const PostDetailsPage = ({ id }: { id: string }) => {
     </>
   );
 };
+
+export default PostDetailsPage;
