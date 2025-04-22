@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+import { API_URL } from '../constans';
 
 export type User = {
   id: number;
@@ -8,7 +9,6 @@ export type User = {
 export const useUser = (id?: number) =>
   useQuery<User>({
     queryKey: ['user', id],
-    queryFn: () =>
-      fetch(`https://jsonplaceholder.typicode.com/users/${id}`).then(res => res.json()),
+    queryFn: () => fetch(`${API_URL}/users/${id}`).then(res => res.json()),
     enabled: Boolean(id)
   });
