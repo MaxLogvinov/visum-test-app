@@ -1,4 +1,4 @@
-import { Post } from '@/entities/post/model';
+import { Post } from '@/entities/post/types';
 import { Card, CardContent, Typography, Button, Stack } from '@mui/material';
 import Link from 'next/link';
 

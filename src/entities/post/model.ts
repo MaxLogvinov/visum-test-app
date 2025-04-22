@@ -1,12 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { API_URL } from '../constans';
-
-export type Post = {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-};
+import { Post } from './types';
 
 export const usePosts = (page: number = 1, limit: number = 10) =>
   useQuery<Post[]>({

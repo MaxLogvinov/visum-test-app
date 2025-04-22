@@ -1,9 +1,7 @@
-'use client';
-
 import { usePosts } from '@/entities/post/model';
 import { PostPreview } from '@/features/PostPreview';
 import { Stack, Typography, Pagination } from '@mui/material';
-import { ErrorDialog } from '@/shared/ErrorDialog/ErrorDialog';
+import { ErrorDialog } from '@/shared/error/ErrorDialog';
 import { DefaultLoader } from '@/shared/DefaultLoader/DefaultLoader';
 import { useDialogProps } from '@/shared/hooks/useDialogProps';
 import { useState, useEffect } from 'react';

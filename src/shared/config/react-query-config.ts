@@ -1,5 +1,3 @@
-'use client';
-
 import { queryClient } from '@/shared/api/queryClient';
 import { QueryCacheNotifyEvent } from '@tanstack/react-query';
 

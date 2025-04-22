@@ -1,10 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { API_URL } from '../constans';
-
-export type User = {
-  id: number;
-  name: string;
-};
+import { User } from './types';
 
 export const useUser = (id?: number) =>
   useQuery<User>({

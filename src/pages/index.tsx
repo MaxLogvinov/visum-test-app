@@ -1,7 +1,5 @@
 import { PostList } from '@/widgets/PostList';
 
-const PostListPage = () => {
+export default function Home() {
   return <PostList />;
-};
-
-export default PostListPage;
+}
